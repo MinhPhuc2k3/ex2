@@ -14,6 +14,7 @@ last_index = 0
 inset  = 1
 
 print('processing...')
+file_content = re.sub("\\s+", " ", file_content)
 list_tables = re.findall(pattern, file_content)
 for table in list_tables:
     last_index = file_content.find(table, last_index)
